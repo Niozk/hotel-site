@@ -9,6 +9,7 @@ Front-end
 -vue-router
 -pinia
 -primevue
+-primeicons
 -motion.js
 
 Dev Dependencies
