@@ -9,9 +9,9 @@
             </ul>
             <ul class="nav-list-3">
                 <div class="nav-list-3-items-container" v-if="isNavVisible">
-                    <li><button class="language">
+                    <li><button class="language" @click="store.languageVisible = true">
                         <img class="language-img" src="../assets/world_icon.png" alt="World Icon">
-                        <p>English</p>
+                        <p>English (UK)</p>
                     </button></li>
                     <li><a href="#"><i class="icon-user"></i></a></li>
                 </div>

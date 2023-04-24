@@ -4,9 +4,10 @@ import { createPinia } from 'pinia'
 import App from './App.vue'
 import router from './router'
 import './assets/main.css'
+import "./assets/flag-icons-main/css/flag-icons.min.css";
 
 import PrimeVue from 'primevue/config'
-import "primevue/resources/themes/lara-light-indigo/theme.css"
+import "./assets/theme.css"
 import "primevue/resources/primevue.min.css"
 import 'primeicons/primeicons.css'
 
@@ -21,5 +22,5 @@ app.mount('#app')
 
 // PRIMEVUE IMPORTS
 
-// import Button from "primevue/button"
-// app.component('Button', Button);
+import Dialog from 'primevue/dialog';
+app.component('Dialog', Dialog);

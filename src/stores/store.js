@@ -9,5 +9,7 @@ export const useStore = defineStore('store', () => {
     {text: 'Partners', href: '#'},
   ])
 
-  return { navList2Items }
+  const languageVisible = ref(false)
+
+  return { navList2Items, languageVisible }
 })

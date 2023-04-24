@@ -4,8 +4,8 @@
         <ul>
             <li v-for="item in navList2Items" :key="item"><a :href="item.href">{{ item.text }}</a></li>
             <li><a href="#">Account&nbsp;&nbsp;&nbsp;<i class="icon-user"></i></a></li>
-            <li><button class="language">
-                <p>English</p>
+            <li><button class="language" @click="store.languageVisible = true">
+                <p>English (UK)</p>
                 <img class="language-img" src="../assets/world_icon.png" alt="World Icon">
             </button></li>
         </ul>
@@ -19,15 +19,15 @@ import { useStore } from '@/stores/store.js'
 const store = useStore();
 const navList2Items = store.navList2Items;
 
-onMounted(() => {
-    document.addEventListener("click", function(event) {
-        const sidemenu = document.getElementById("sidemenu");
-        const openBtn = document.getElementById("open-btn");
-        if (!openBtn.contains(event.target) && !sidemenu.contains(event.target)) {
-            closeSidemenu();
-        }
-    })
-});
+// onMounted(() => {
+//     document.addEventListener("click", function(event) {
+//         const sidemenu = document.getElementById("sidemenu");
+//         const openBtn = document.getElementById("open-btn");
+//         if (!openBtn.contains(event.target) && !sidemenu.contains(event.target)) {
+//             closeSidemenu();
+//         }
+//     })
+// });
 
 function closeSidemenu() {
     const sidemenu = document.getElementById("sidemenu");
