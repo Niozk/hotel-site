@@ -14,20 +14,14 @@
 
 <script setup>
 import { onMounted } from 'vue';
-import { useStore } from '@/stores/store.js'
+import { useStore } from '@/stores/store.js';
 
 const store = useStore();
 const navList2Items = store.navList2Items;
 
-// onMounted(() => {
-//     document.addEventListener("click", function(event) {
-//         const sidemenu = document.getElementById("sidemenu");
-//         const openBtn = document.getElementById("open-btn");
-//         if (!openBtn.contains(event.target) && !sidemenu.contains(event.target)) {
-//             closeSidemenu();
-//         }
-//     })
-// });
+onMounted(() => {
+    closeSidemenuOnClick();
+});
 
 function closeSidemenu() {
     const sidemenu = document.getElementById("sidemenu");
@@ -38,6 +32,22 @@ function closeSidemenu() {
         sidemenu.style.boxShadow = "0";
         document.body.style.marginRight = "0";
     }, 500);
+}
+
+function closeSidemenuOnClick() {
+    document.addEventListener("click", function(event) {
+        const sidemenu = document.getElementById("sidemenu");
+        const openBtn = document.getElementById("open-btn");
+        const languageDialog = document.getElementById("language-dialog");
+        if (sidemenu && openBtn && languageDialog) {
+            if (!sidemenu.contains(event.target) && !openBtn.contains(event.target) && !languageDialog.contains(event.target)) {
+            }
+        } else if (sidemenu && openBtn) {
+            if (!sidemenu.contains(event.target) && !openBtn.contains(event.target)) {
+                closeSidemenu();
+            }
+        }
+    })
 }
 </script>
 
@@ -112,6 +122,7 @@ li:hover {
     display: flex;
     align-items: center;
     gap: 10px;
+    white-space: nowrap;
 }
 
 .language-img {

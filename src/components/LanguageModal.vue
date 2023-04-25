@@ -1,5 +1,6 @@
 <template>
-    <Dialog v-model:visible="store.languageVisible" modal header="Choose your language" :style="{ width: '50vw' }" :draggable="false" :breakpoints="{ '1150px': '75vw' }">
+    <Dialog id="language-dialog" v-model:visible="store.languageVisible" modal header="Choose your language" :style="{ width: '50vw' }" :draggable="false" 
+    :dismissableMask="true" :breakpoints="{ '1150px': '75vw' }">
         <button v-for="item in store.languages" :class="{ 'selected': item.selected }" @click="selectLanguage(item)">
             <i :class="item.flag"></i> &nbsp;{{ item.language }}&nbsp;
             <i v-if="item.selected" class="icon-ok"></i>
