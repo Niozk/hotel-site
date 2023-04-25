@@ -1,33 +1,30 @@
 <template>
     <Dialog v-model:visible="store.languageVisible" modal header="Choose your language" :style="{ width: '50vw' }" :draggable="false" :breakpoints="{ '1150px': '75vw' }">
-        <button v-for="item in languages" :class="{ 'selected': selectedLanguage === item }" @click="selectedLanguage = item">
-            <i :class="item.flag"></i> &nbsp; {{ item.language }} 
+        <button v-for="item in store.languages" :class="{ 'selected': item.selected }" @click="selectLanguage(item)">
+            <i :class="item.flag"></i> &nbsp;{{ item.language }}&nbsp;
+            <i v-if="item.selected" class="icon-ok"></i>
         </button>
     </Dialog>
 </template>
 
 <script setup>
 import { useStore } from '@/stores/store.js'
-import { ref } from 'vue'
 import Dialog from 'primevue/dialog';
 
 const store = useStore();
-const selectedLanguage = ref(null);
-const languages = ref([
-    {flag: 'fi fi-gb', language: 'English (UK)'},
-    {flag: 'fi fi-us', language: 'English (US)'},
-    {flag: 'fi fi-nl', language: 'Nederlands'},
-    {flag: 'fi fi-de', language: 'Deutsch'},
-    {flag: 'fi fi-fr', language: 'Français'},
-    {flag: 'fi fi-es', language: 'Español'}
-])
+
+function selectLanguage(selectedItem) {
+    store.languages.forEach(item => {
+        item.selected = item === selectedItem;
+    });
+}
 </script>
 
 <style scoped>
 button {
     margin: 15px 5px;
     padding: 15px 10px;
-    width: 165px;
+    width: 200px;
     border: 0;
     text-align: left;
     background-color: transparent;
@@ -52,5 +49,9 @@ button:hover {
 i {
     font-size: 22px;
     color: #2B2D42;
+}
+
+.icon-ok {
+    font-size: 18px;
 }
 </style>

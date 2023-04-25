@@ -5,7 +5,7 @@
             <li v-for="item in navList2Items" :key="item"><a :href="item.href">{{ item.text }}</a></li>
             <li><a href="#">Account&nbsp;&nbsp;&nbsp;<i class="icon-user"></i></a></li>
             <li><button class="language" @click="store.languageVisible = true">
-                <p>English (UK)</p>
+                <p>{{ store.getCurrentLanguage() }}</p>
                 <img class="language-img" src="../assets/world_icon.png" alt="World Icon">
             </button></li>
         </ul>
