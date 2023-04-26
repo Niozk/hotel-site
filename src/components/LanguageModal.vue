@@ -23,7 +23,7 @@ function selectLanguage(selectedItem) {
 
 <style scoped>
 button {
-    margin: 15px 5px;
+    margin: 15px 25px;
     padding: 15px 10px;
     width: 200px;
     border: 0;
@@ -54,5 +54,12 @@ i {
 
 .icon-ok {
     font-size: 18px;
+}
+
+@media only screen 
+and (max-width: 450px) {
+    button {
+        margin: 15px 5px;
+    }
 }
 </style>

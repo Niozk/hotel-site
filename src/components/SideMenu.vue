@@ -3,7 +3,6 @@
         <button class="close-btn" @click="closeSidemenu()">&times;</button>
         <ul>
             <li v-for="item in navList2Items" :key="item"><a :href="item.href">{{ item.text }}</a></li>
-            <li><a href="#">Account&nbsp;&nbsp;&nbsp;<i class="icon-user"></i></a></li>
             <li><button class="language" @click="store.languageVisible = true">
                 <p>{{ store.getCurrentLanguage() }}</p>
                 <img class="language-img" src="../assets/world_icon.png" alt="World Icon">
@@ -80,8 +79,8 @@ button {
     border: 0;
     background-color: transparent;
     color: #2B2D42;
+    font: inherit;
     font-size: 16px;
-    font-weight: bold;
     cursor: pointer;
 }
 
@@ -112,10 +111,6 @@ li {
 
 li:hover {
     background-color: #0000001a;
-}
-
-.icon-user {
-    font-size: 20px;
 }
 
 .language {
