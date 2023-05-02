@@ -45,18 +45,18 @@ function openSidemenu() {
 
 <style scoped>
 header {
-    height: 300px;
+    height: 100px;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    background-color: white;
 }
 
 nav {
     display: flex;
-    position: sticky;
-    z-index: 1;
-    top: 0;
     margin: 0 50px;
     background-color: transparent;
     font-weight: bold;
-    /* border-bottom: #e6e6e6 solid 1px; */
 }
 
 ul {
