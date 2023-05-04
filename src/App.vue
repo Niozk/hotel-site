@@ -28,4 +28,18 @@ import IntroSection from './components/IntroSection.vue';
 .side-1 {
     background-color: #ef233c;
 }
+
+@media only screen 
+and (max-width: 1070px) {
+    .sticky-fade {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        height: 100px;
+        background-color: #ef233c;
+    }
+
+    .side-2 {
+        background-color: #ef233c;
+    }
+}
 </style>

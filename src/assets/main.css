@@ -9,7 +9,7 @@ body {
   min-height: 100vh;
   font-family: Poppins, arial, helvetica;
   /* sticky test */
-  margin-bottom: 3000px;
+  margin-bottom: 2000px;
 }
 
 @font-face {

@@ -24,3 +24,21 @@ app.mount('#app')
 
 import Dialog from 'primevue/dialog';
 app.component('Dialog', Dialog);
+
+import AutoComplete from 'primevue/autocomplete';
+app.component('AutoComplete', AutoComplete);
+
+import Calendar from 'primevue/calendar';
+app.component('Calendar', Calendar);
+
+import Dropdown from 'primevue/dropdown';
+app.component('Dropdown', Dropdown);
+
+import Slider from 'primevue/slider';
+app.component('Slider', Slider);
+
+import InputNumber from 'primevue/inputnumber';
+app.component('InputNumber', InputNumber);
+
+import Button from 'primevue/button';
+app.component('Button', Button);
