@@ -130,7 +130,7 @@ const search = () => {
 
 p {
     margin: 0;
-    font-family: Poppins;
+    font-family: Poppins, arial, helvetica;
 }
 
 @media only screen 

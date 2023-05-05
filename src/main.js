@@ -42,3 +42,6 @@ app.component('InputNumber', InputNumber);
 
 import Button from 'primevue/button';
 app.component('Button', Button);
+
+import Carousel from 'primevue/carousel';
+app.component('Carousel', Carousel);
