@@ -8,8 +8,6 @@ body {
   padding: 0;
   min-height: 100vh;
   font-family: Poppins, arial, helvetica;
-  /* sticky test */
-  margin-bottom: 2000px;
 }
 
 @font-face {

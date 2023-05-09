@@ -45,3 +45,6 @@ app.component('Button', Button);
 
 import Carousel from 'primevue/carousel';
 app.component('Carousel', Carousel);
+
+import Card from 'primevue/card';
+app.component('Card', Card);

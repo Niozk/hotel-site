@@ -81,7 +81,7 @@ function updateWidth() {
 }
 
 const search = () => {
-    itemsLocation.value = ['Amsterdam', 'Rotterdam', 'Enschede', 'Utrecht', 'Den Jaag', 'Zoetermeer', 'Heerhugowaard'];
+    itemsLocation.value = ['Amsterdam', 'Rotterdam', 'Enschede', 'Utrecht', 'Den Haag', 'Zoetermeer', 'Heerhugowaard'];
 }
 </script>
 
