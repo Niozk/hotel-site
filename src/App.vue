@@ -7,6 +7,8 @@
     <SideMenu />
     <LanguageModal />
     <RouterView/>
+    <PaymentSection />
+    <FooterSection />
 </template>
 
 <script setup>
@@ -15,6 +17,8 @@ import NavBar from './components/NavBar.vue';
 import SideMenu from './components/SideMenu.vue';
 import LanguageModal from './components/LanguageModal.vue';
 import IntroSection from './components/IntroSection.vue';
+import PaymentSection from './components/PaymentSection.vue';
+import FooterSection from './components/FooterSection.vue';
 </script>
 
 <style scoped>
