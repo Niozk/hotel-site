@@ -3,10 +3,10 @@
         <NavBar />
         <div class="sticky-fade"><div class="side-1"></div><div class="side-2"></div></div>
     </div>
-    <IntroSection/>
+    <IntroSection />
     <SideMenu />
     <LanguageModal />
-    <RouterView/>
+    <RouterView />
     <PaymentSection />
     <FooterSection />
 </template>

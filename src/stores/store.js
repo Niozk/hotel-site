@@ -1,12 +1,13 @@
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
+import { useRouter } from 'vue-router';
 
 export const useStore = defineStore('store', () => {
   const navList2Items = ref([
-    {text: 'All Hotels', href: '#'},
-    {text: 'Super Deals', href: '#'},
-    {text: 'The Team', href: '#'},
-    {text: 'Partners', href: '#'},
+    {text: 'All Hotels', href: '#', click: linkToAllHotels},
+    {text: 'Super Deals', href: '#', click: ''},
+    {text: 'The Team', href: '#', click: ''},
+    {text: 'Partners', href: '#', click: ''}
   ])
 
   const languageVisible = ref(false)
@@ -28,6 +29,12 @@ export const useStore = defineStore('store', () => {
       }
     });
     return currentLanguage.value;
+  }
+
+  const router = useRouter();
+
+  function linkToAllHotels() {
+    router.push('/hotels');
   }
 
   return { navList2Items, languageVisible, languages, getCurrentLanguage }

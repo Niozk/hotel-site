@@ -2,7 +2,7 @@
     <aside id="sidemenu">
         <button class="close-btn" @click="closeSidemenu()">&times;</button>
         <ul>
-            <li v-for="item in navList2Items" :key="item"><a :href="item.href">{{ item.text }}</a></li>
+            <li v-for="item in navList2Items" :key="item"><a :href="item.href" @click="item.click">{{ item.text }}</a></li>
             <li><button class="language" @click="store.languageVisible = true">
                 <p>{{ store.getCurrentLanguage() }}</p>
                 <img class="language-img" src="../assets/world_icon.png" alt="World Icon">

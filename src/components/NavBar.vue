@@ -2,10 +2,10 @@
     <header>
         <nav>
             <ul class="nav-list-1">
-                <li class="logo"><a href="#"><img src="../assets/logo.png" alt="Logo of Hotel Site"></a></li>
+                <li class="logo"><a href="#" @click="linkToHome"><img src="../assets/logo.png" alt="Logo of Hotel Site"></a></li>
             </ul>
             <ul class="nav-list-2" v-if="isNavVisible">
-                <li v-for="item in navList2Items" :key="item"><a :href="item.href">{{ item.text }}</a></li>
+                <li v-for="item in navList2Items" :key="item"><a :href="item.href" @click="item.click">{{ item.text }}</a></li>
             </ul>
             <ul class="nav-list-3">
                 <li v-if="isNavVisible"><button class="language" @click="store.languageVisible = true">
@@ -22,10 +22,11 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import { useStore } from '@/stores/store.js'
+import { useRouter } from 'vue-router';
 import AccountButton from './AccountButton.vue';
-// import { RouterLink } from 'vue-router'
 
 const store = useStore();
+const router = useRouter();
 const navList2Items = store.navList2Items;
 const isNavVisible = ref(window.innerWidth >= 1000);
 
@@ -40,6 +41,10 @@ function openSidemenu() {
     sidemenu.style.width = "285px";
     sidemenu.style.boxShadow = "0 3px 10px rgb(0 0 0 / 0.2)";
     sidemenu.style.opacity = "1";
+}
+
+function linkToHome() {
+  router.push('/');
 }
 </script>
 
