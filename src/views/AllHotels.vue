@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section class="scroll-fade">
         <p class="section-title" id="section-title-all-hotels">All Hotels</p>
         <div class="container">
             <div v-for="item in locations" class="card">
@@ -14,7 +14,8 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
+import { animate, scroll } from "motion"
 
 const locations = ref([
     {city: 'Amsterdam', province: 'Noord-Holland', img: '../src/assets/hotel_1.png'},
@@ -25,6 +26,15 @@ const locations = ref([
     {city: 'Zoetermeer', province: 'Zuid-Holland', img: '../src/assets/hotel_6.png'},
     {city: 'Heerhugowaard', province: 'Noord-Holland', img: '../src/assets/hotel_7.png'}
 ])
+
+onMounted(() => {
+    document.querySelectorAll(".scroll-fade").forEach((item) => {
+        scroll(animate(item, { opacity: [0, 0, 1] }), {
+            target: item,
+            offset: ["start center", "center end"]
+        });
+    });
+});
 
 </script>
 

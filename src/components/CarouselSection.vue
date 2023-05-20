@@ -26,7 +26,7 @@ const carouselItems = ref([
     {icon: 'icon-glass', text: 'Need a break? Come to our luxury lounge'},
 ]);
 
-const responsiveOptions = ref([ // voor dit check api onderaan
+const responsiveOptions = ref([
     {
         breakpoint: '1070px',
         numVisible: 3,
