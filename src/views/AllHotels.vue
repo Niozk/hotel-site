@@ -1,6 +1,6 @@
 <template>
     <section>
-        <p class="section-title">All Hotels</p>
+        <p class="section-title" id="section-title-all-hotels">All Hotels</p>
         <div class="container">
             <div v-for="item in locations" class="card">
                 <img :src="item.img" alt="Hotel foto's">
@@ -118,17 +118,6 @@ and (max-width: 1120px) {
     }
 
     .container {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media only screen 
-and (max-width: 1075px) {
-    section {
-        padding: 200px 100px 100px 100px;
-    }
-
-    .container {
         grid-template-columns: 1fr;
     }
 
@@ -139,14 +128,16 @@ and (max-width: 1075px) {
 }
 
 @media only screen 
+and (max-width: 1075px) {
+    section {
+        padding: 200px 100px 100px 100px;
+    }
+}
+
+@media only screen 
 and (max-width: 725px) {
     section {
         padding: 200px 30px 100px 30px;
-    }
-
-    .card {
-        width: 500px;
-        height: 400px;
     }
 }
 

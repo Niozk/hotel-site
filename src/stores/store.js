@@ -4,8 +4,8 @@ import { useRouter } from 'vue-router';
 
 export const useStore = defineStore('store', () => {
   const navList2Items = ref([
-    {text: 'All Hotels', href: '#', click: linkToAllHotels},
-    {text: 'Super Deals', href: '#', click: ''},
+    {text: 'All Hotels', href: '#section-title-all-hotels', click: linkToAllHotels},
+    {text: 'Super Deals', href: '#section-title', click: ''},
     {text: 'The Team', href: '#', click: ''},
     {text: 'Partners', href: '#', click: ''}
   ])

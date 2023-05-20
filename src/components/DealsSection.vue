@@ -1,6 +1,6 @@
 <template>
     <section>
-        <p class="section-title">Top deals of today</p>
+        <p class="section-title" id="section-title">Top deals of today</p>
         <div class="cards">
             <Card v-for="item in displayedCards">
                 <template #header>
