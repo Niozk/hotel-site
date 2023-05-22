@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section class="scroll-fade-deals">
         <p class="section-title" id="section-title">Top deals of today</p>
         <div class="cards">
             <Card v-for="item in displayedCards">
@@ -25,6 +25,7 @@
 
 <script setup>
 import { ref, onMounted, computed } from "vue";
+import { animate, scroll } from "motion"
 import Card from 'primevue/card';
 import Button from 'primevue/button';
 
@@ -48,7 +49,14 @@ const handleResize = () => {
 };
 
 onMounted(() => {
-  window.addEventListener("resize", handleResize);
+    window.addEventListener("resize", handleResize);
+
+    document.querySelectorAll(".scroll-fade-deals").forEach((item) => {
+        scroll(animate(item, { opacity: [0, 1, 1] }), {
+            target: item,
+            offset: ["start end", "end end"]
+        });
+    });
 });
 
 const displayedCards = computed(() => {

@@ -29,7 +29,7 @@ const locations = ref([
 
 onMounted(() => {
     document.querySelectorAll(".scroll-fade").forEach((item) => {
-        scroll(animate(item, { opacity: [0, 0, 1] }), {
+        scroll(animate(item, { opacity: [0, 1] }), {
             target: item,
             offset: ["start center", "center end"]
         });

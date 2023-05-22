@@ -11,7 +11,20 @@
 </template>
 
 <script setup>
+import { onMounted } from 'vue';
+import { animate } from "motion"
 import HotelSearchBox from './HotelSearchBox.vue';
+
+let viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+let slideScale = (viewportWidth <= 1070) ? 0 : 10;
+
+onMounted(() => {
+    animate(
+        ".welcome-container p",
+        { x: slideScale, opacity: [0, 1] },
+        { duration: 0.9 }
+    )
+});
 </script>
 
 <style scoped>
@@ -24,7 +37,7 @@ section {
 
 .welcome-container {
     display: flex;
-    padding: 85px 0 0 70px;
+    padding: 85px 0 0 60px;
     font-size: 42px;
     background-color: #ef233c;
     color: white;
@@ -42,7 +55,7 @@ section {
 @media only screen 
 and (max-width: 1460px) {
     .welcome-container {
-        padding-left: 35px;
+        padding-left: 25px;
         font-size: 32px;
     }
 }
