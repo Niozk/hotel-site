@@ -22,9 +22,9 @@ const locations = ref([
     {city: 'Rotterdam', province: 'Zuid-Holland', img: 'assets/hotel_2.png'},
     {city: 'Enschede', province: 'Gelderland', img: 'assets/hotel_3.png'},
     {city: 'Utrecht', province: 'Utrecht', img: 'assets/hotel_4.png'},
-    {city: 'Den Haag', province: 'Zuid-Holland', img: 'src/assets/hotel_5.png'},
-    {city: 'Zoetermeer', province: 'Zuid-Holland', img: 'src/assets/hotel_6.png'},
-    {city: 'Heerhugowaard', province: 'Noord-Holland', img: 'src/assets/hotel_7.png'}
+    {city: 'Den Haag', province: 'Zuid-Holland', img: 'assets/hotel_5.png'},
+    {city: 'Zoetermeer', province: 'Zuid-Holland', img: 'assets/hotel_6.png'},
+    {city: 'Heerhugowaard', province: 'Noord-Holland', img: 'assets/hotel_7.png'}
 ])
 
 onMounted(() => {
