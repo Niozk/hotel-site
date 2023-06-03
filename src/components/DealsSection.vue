@@ -32,8 +32,8 @@ import Button from 'primevue/button';
 const cardItems = ref([
     {price: '95', city: 'Amsterdam', img: 'assets/kamer_1.png'},
     {price: '130', city: 'Rotterdam', img: "assets/kamer_2.png"},
-    {price: '105', city: 'Utrecht', img: "src/assets/kamer_4.png"},
-    {price: '180', city: 'Amsterdam', img: 'src/assets/kamer_5.png'},
+    {price: '105', city: 'Utrecht', img: "assets/kamer_4.png"},
+    {price: '180', city: 'Amsterdam', img: './assets/kamer_5.png'},
     {price: '220', city: 'Amsterdam', img: '../assets/kamer_6.png'},
     {price: '125', city: 'Den Haag', img: 'public/assets/kamer_7.png'},
     {price: '90', city: 'Enschede', img: '/assets/kamer_3.png'},
