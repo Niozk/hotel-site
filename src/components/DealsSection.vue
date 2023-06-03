@@ -35,8 +35,8 @@ const cardItems = ref([
     {price: '105', city: 'Utrecht', img: "src/assets/kamer_4.png"},
     {price: '180', city: 'Amsterdam', img: 'src/assets/kamer_5.png'},
     {price: '220', city: 'Amsterdam', img: '../assets/kamer_6.png'},
-    {price: '125', city: 'Den Haag', img: '../src/assets/kamer_7.png'},
-    {price: '90', city: 'Enschede', img: '../src/assets/kamer_3.png'},
+    {price: '125', city: 'Den Haag', img: 'public/assets/kamer_7.png'},
+    {price: '90', city: 'Enschede', img: '/assets/kamer_3.png'},
     {price: '135', city: 'Rotterdam', img: '../src/assets/kamer_8.png'}
 ])
 
