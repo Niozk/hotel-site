@@ -8,11 +8,11 @@
 import { ref } from "vue";
 
 const img = ref([
-    {img: '../src/assets/pay_icon_1.png'},
-    {img: '../src/assets/pay_icon_2.png'},
-    {img: '../src/assets/pay_icon_3.png'},
-    {img: '../src/assets/pay_icon_4.png'},
-    {img: '../src/assets/pay_icon_5.png'}
+    {img: 'assets/pay_icon_1.png'},
+    {img: 'assets/pay_icon_2.png'},
+    {img: 'assets/pay_icon_3.png'},
+    {img: 'assets/pay_icon_4.png'},
+    {img: 'assets/pay_icon_5.png'}
 ])
 </script>
 
