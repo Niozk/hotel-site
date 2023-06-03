@@ -14,7 +14,11 @@ const router = createRouter({
       path: '/hotels',
       name: 'hotels',
       component: AllHotels
-    }
+    },
+    // {
+    //   path: '/*',
+    //   component: 404  // voor redirects samen met de _redirect file
+    // },
   ]
 })
 
